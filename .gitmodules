@@ -1,0 +1,9 @@
+[submodule "bdf"]
+	path = bdf
+	url = https://github.com/avnet/bdf.git
+[submodule "hdl"]
+	path = hdl
+	url = https://github.com/avnet/hdl.git
+[submodule "petalinux"]
+	path = petalinux
+	url = https://github.com/avnet/petalinux.git
