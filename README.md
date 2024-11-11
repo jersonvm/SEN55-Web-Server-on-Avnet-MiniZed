@@ -22,7 +22,7 @@
 5. Open the GTKTerm or any serial port terminal. Configure it by selecting the port assigned to the MiniZed board, and choosing the following: 115200 baud rate, no parity, 8 bits, 1 stopbit, and no flow control.
 6. Set the boot select switch of the MiniZed board to FLASH mode. Press the RESET button and watch the serial terminal as the minimal Petalinux image successfully boots up. 
 7. Insert the USB thumb drive to the USB Host connector of the MiniZed board.
-8. Then, execute the Linux commands listed in the _"4- Boot from QSPI (u-boot) and EMMC (kernel & Ext4 rootfs)"_ section of _how_to_boot.txt_ located in petalinux/projects/minized_sbc_base_2021_1/ folder.
+8. Then, execute the Linux commands listed in the _"4- Boot from QSPI (u-boot) and EMMC (kernel & Ext4 rootfs)"_ section of _how_to_boot.txt_ located in _petalinux/projects/minized_sbc_base_2021_1/_ folder.
 9. Reboot the MiniZed board (execute Linux command: _shutdown -r now_) and watch the serial terminal as the full Petalinux image boots up.
 
 
