@@ -1,0 +1,4 @@
+TRACE::2024-11-24.13:59:31::SCWLinux::Copying the qemu file from  /tools/Xilinx/Vitis/2021.1/data/emulation/platforms/zynq/sw/a9_linux/qemu/qemu_args.txt To /home/training/SEN55-Web-Server-on-Avnet-MiniZed/sen55/Minized-Petalinux/export/Minized-Petalinux/sw/Minized-Petalinux/qemu/
+TRACE::2024-11-24.13:59:31::SCWLinux::Copying the qemu file from  /tools/Xilinx/Vitis/2021.1/data/emulation/platforms/zynq/sw/a9_linux/qemu/qemu_args.txt To /home/training/SEN55-Web-Server-on-Avnet-MiniZed/sen55/Minized-Petalinux/export/Minized-Petalinux/sw/Minized-Petalinux/linux_domain/qemu/
+TRACE::2024-11-24.13:59:31::SCWLinux:: Copying the user libraries. 
+TRACE::2024-11-24.13:59:31::SCWLinux::Skipping the Petalinux build as image is already given.
