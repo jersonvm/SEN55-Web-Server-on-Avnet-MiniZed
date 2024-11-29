@@ -10,10 +10,10 @@
 4. USB thumb drive formatted as FAT/FAT32. At least 8GB in capacity.  
 
 # Build notes:
-1. Run the _build_project_ script to create the petalinux build. This will also build the _minized_sbc_base_ Vivado project and the hardware platform needed for the petalinux build process. This is a 4-step process: target hardware platform build, initial petalinux build, rootfs configuration, and petalinux rebuild.  
+1. Run the _build_project_ script to create the petalinux build. This will also build the _minized_sensor_fusion_ Vivado project and the hardware platform needed for the petalinux build process. This is a 4-step process: target hardware platform build, initial petalinux build, rootfs configuration, and petalinux rebuild.  
 2. The build process will also include the SEN55 and webserver applications to the rootfs.
 3. Do not forget to include the WiFi network SSID name and password as arguments to the _build_project_ script. Both SSID name and password must be inside single quotes.  
-4. This will take a long time, from several minutes up to a few hours, depending on your internet speed and development system specification. After the whole process, rootfs.wic will be generated inside the _petalinux/projects/minized_sbc_base_2021_1/_ folder.  
+4. This will take a long time, from several minutes up to a few hours, depending on the internet speed and development system specification. After the whole process, rootfs.wic will be generated inside the _petalinux/projects/minized_sbc_base_2021_1/_ folder.  
 
 # Steps to flash the Petalinux image to the MiniZed board:
 1. Attach the USB thumb drive to the host computer.  
