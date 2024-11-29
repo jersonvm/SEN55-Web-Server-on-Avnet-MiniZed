@@ -7,3 +7,9 @@
 [submodule "petalinux"]
 	path = petalinux
 	url = https://github.com/avnet/petalinux.git
+[submodule "hdl2"]
+	path = hdl2
+	url = https://github.com/Avnet/hdl
+[submodule "embedded-i2c-sen5x"]
+	path = embedded-i2c-sen5x
+	url = https://github.com/Sensirion/embedded-i2c-sen5x

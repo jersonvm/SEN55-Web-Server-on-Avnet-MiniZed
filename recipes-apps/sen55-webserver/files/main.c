@@ -187,14 +187,15 @@ int main(void) {
         }
 
         FILE *fp;
-        fp = fopen("/mnt/sd-mmcblk0p1/sen55.txt","w");
+        /*fp = fopen("sen55.txt","w");*/
+        fp = fopen("index.html","w");
 
         if(!fp) {
         	perror("fopen");
         	return 1;
         }
 
-        if(fprintf(fp,"%.1f,%.1f,%.1f,%.1f,%.1f,%.1f,%.1f,%.1f",
+        /*if(fprintf(fp,"%.1f,%.1f,%.1f,%.1f,%.1f,%.1f,%.1f,%.1f",
         		mass_concentration_pm1p0/ 10.0f,
 				mass_concentration_pm2p5/ 10.0f,
 				mass_concentration_pm4p0/ 10.0f,
@@ -206,6 +207,48 @@ int main(void) {
 			) == EOF) {
         	perror("fprintf");
         	return 1;
+        }*/
+
+        if(fprintf(fp, "\
+        		<!DOCTYPE html>\n \
+				<html>\n \
+				<head>\n \
+				<title> SEN55 Web Server on Avnet MiniZed </title>\n \
+				<link type=\"text/css\" rel=\"stylesheet\" href=\"css/main.css\" />\n \
+				<meta http-equiv=\"refresh\" content=\"5\">\n \
+				<script>\n \
+				</script>\n \
+				</head>\n \
+				<body>\n \
+				<div id=\"container\">\n \
+				<h1>SEN55 Web Server on Avnet MiniZed</h1>\n \
+				<p> This is a demonstration of a simple sensor embedded webserver using the Avnet MiniZed board and SEN55 all-in-one environmental sensor\n \
+				</p>\n \
+				<h2> Sensor Reading </h2>\n \
+				<p>\n \
+				Mass Concentration PM1.0 = %.1f <br>\n \
+				Mass Concentration PM2.5 = %.1f <br>\n \
+     			Mass Concentration PM4.0  = %.1f <br>\n \
+				Mass Concentration PM10.0  = %.1f <br>\n \
+				Ambient Humidity = %.1f <br>\n \
+				Ambient Temperature = %.1f <br>\n \
+				VOC Index = %.1f <br>\n \
+				NOx Index = %.1f <br>\n \
+				</p>\n \
+				</div>\n \
+				</body>\n \
+				</html>",
+                mass_concentration_pm1p0/ 10.0f,
+        		mass_concentration_pm2p5/ 10.0f,
+        		mass_concentration_pm4p0/ 10.0f,
+        		mass_concentration_pm10p0/ 10.0f,
+        		ambient_humidity / 100.0f,
+        		ambient_temperature / 200.0f,
+        		voc_index / 10.0f,
+        		nox_index / 10.0f
+        		) == EOF) {
+                	perror("fprintf");
+                	return 1;
         }
 
         if(fclose(fp) == EOF) {

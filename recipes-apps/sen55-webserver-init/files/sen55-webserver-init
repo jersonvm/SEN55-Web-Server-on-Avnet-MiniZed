@@ -1,0 +1,37 @@
+#!/bin/sh
+
+DAEMON=/home/root/sen55-webserver/launch_server.sh
+KDAEMON=/home/root/sen55-webserver/stop_server.sh
+
+start ()
+{
+    echo " Starting SEN55 Webserver"
+    start-stop-daemon -S -o -x $DAEMON
+}
+
+stop ()
+{
+    echo " Stopping SEN55 Webserver"
+    start-stop-daemon -K -x $KDAEMON
+}
+
+restart()
+{
+    stop
+    start
+}
+
+[ -e $DAEMON ] || exit 1
+    case "$1" in
+        start)
+            start; ;;
+        stop)
+            stop; ;;
+        restart)
+            restart; ;;
+        *)
+            echo "Usage: $0 {start|stop|restart}"
+            exit 1
+
+    esac
+exit $?
