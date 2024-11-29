@@ -17,7 +17,7 @@
 
 # Steps to flash the Petalinux image to the MiniZed board:
 1. Attach the USB thumb drive to the host computer.  
-2. Copy the _rootfs.wic_ located in _petalinux/projects/minized_sbc_base_2021_1/_ folder to the USB thumb drive or run the command _"cp petalinux/projects/minized_sbc_base_2021_1/rootfs.wic <thumb-drive-location>"_. When finished, remove the USB drive from the host computer.  
+2. Copy the _rootfs.wic_ located in _petalinux/projects/minized_sbc_base_2021_1/_ folder to the USB thumb drive or run the command _"cp petalinux/projects/minized_sbc_base_2021_1/rootfs.wic thumb-drive-location"_. When finished, remove the USB drive from the host computer.  
 3. Apply power to the MiniZed board using the AUX PWR USB connector. Then, attach the MiniZed board to the host computer via USB JTAG/Serial port. Make sure that the boot select switch is set to JTAG position before connecting to the host computer.  
 4. Run the _flash_minimal_image_ script. This will flash the minimal Linux image that will be needed to program the larger Petalinux image (_rootfs.wic_ file that is copied to the USB drive) onto the eMMC of the MiniZed board later.  
 5. Open the GTKTerm or any serial port terminal. Configure it by selecting the port assigned to the MiniZed board, and choosing the following: 115200 baud rate, no parity, 8 bits, 1 stopbit, and no flow control.  
